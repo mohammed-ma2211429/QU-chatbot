@@ -1,0 +1,7 @@
+{
+  "program": "Other / Unlisted Program",
+  "college": null,
+  "total_credits": null,
+  "courses": [],
+  "fallback_instructions": "If the student is in a program not listed above, ask them to describe their remaining required courses and prerequisites. Be transparent that your knowledge is limited and advise them to verify with their advisor."
+}

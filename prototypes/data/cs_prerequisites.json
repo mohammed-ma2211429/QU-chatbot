@@ -1,0 +1,442 @@
+{
+  "program": "Computer Science",
+  "college": "College of Engineering",
+  "total_credits": 120,
+  "source": "QU Undergraduate Catalog 2026-2027, Chapter 10 (degree requirements) and Chapter 11 (course listing)",
+  "courses": [
+    {
+      "code": "CMPS 151",
+      "name": "Programming Concepts",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 1,
+      "term": "Fall"
+    },
+    {
+      "code": "CHEM 101",
+      "name": "General Chemistry I",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 1,
+      "term": "Fall",
+      "prerequisite_note": "((ENGL 040 OR ENGL C002 OR Total for Integrated Core 400) AND (ENGL 041 OR ENGL R002 OR ESL Reading Skills 100) AND (ENGL 042 OR ENGL W002 OR APL for Writing Workshop 225) ) OR ( Total for Integrated Core 400 AND ESL Reading Skills 100 AND       ESL Language Use 100) OR TOEFL_Inst Testing Prog 500 OR    TOEFL Internet-based Test 061 OR  TOEFL Computer-based Test 173 OR Int Eng Lang Test Syst-IELTS 5.5 OR ENGL 004 OR ENGL 111 OR ENGL 250 OR ENGL 201 OR ENGL 202"
+    },
+    {
+      "code": "CHEM 103",
+      "name": "Experimental General Chemistry I",
+      "credits": 1,
+      "prerequisites": [],
+      "year": 1,
+      "term": "Fall",
+      "prerequisite_note": "CHEM 101 Concur."
+    },
+    {
+      "code": "MATH 101",
+      "name": "Calculus I",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 1,
+      "term": "Fall",
+      "prerequisite_note": "(MATH 004 or MATH P100 or Scholastic Aptitude Test-SAT 550 or Scholastic Aptitude SAT New 570 or American College Testing-ACT 24 OR QUPM 235 or (Elementary Algebra 082 and College Level Math 095) ) and ( ( (ENGL 040 or ENGL C002 or Total for Integrated Core 400) and (ENGL 041 or ENGL R002 or ESL Reading Skills 100) and (ENGL 042 or ENGL W002 or APL for Writing Workshop 225) ) or ( Total for Integrated Core 400 and ESL Reading Skills 100 and ESL Language Use 100) or TOEFL_Inst Testing Prog 500 or TOEFL Internet-based Test 061 or TOEFL Computer-based Test 173 or Int Eng Lang Test Syst-IELTS 5.5 or ENGL 004 or ENGL 250 or ENGL 201 or ENGL 111 or ENGL 202)"
+    },
+    {
+      "code": "ENGL 202",
+      "name": "English Language I Post Foundation",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 1,
+      "term": "Fall",
+      "prerequisite_note": "ENGL 004 OR (    (ENGL 040 OR ENGL C002 OR Total for Integrated Core 400 ) AND ( ENGL 041 OR ENGL R002 OR ESL Reading Skills 100 ) AND ( ENGL 042 OR ENGL W002 OR APL for Writing Workshop 225) ) OR TOEFL_Inst Testing Prog 500 OR            Int Eng Lang Test Syst-IELTS 5.5 OR            TOEFL Internet-based Test 061 OR TOEFL Computer-based Test 173 OR  (Total for Integrated Core 400 AND ESL Language Use 100 AND  ESL Reading Skills 100)."
+    },
+    {
+      "code": "HIST 121",
+      "name": "History of Qatar",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 1,
+      "term": "Fall"
+    },
+    {
+      "code": "MATH 231",
+      "name": "Linear Algebra",
+      "credits": 3,
+      "prerequisites": [
+        "MATH 101"
+      ],
+      "year": 1,
+      "term": "Spring"
+    },
+    {
+      "code": "CMPS 251",
+      "name": "Object-Oriented Programming",
+      "credits": 4,
+      "prerequisites": [],
+      "year": 1,
+      "term": "Spring",
+      "prerequisite_note": "CMPS 151 OR GENG 106",
+      "prerequisites_one_of": [
+        "CMPS 151",
+        "GENG 106"
+      ]
+    },
+    {
+      "code": "PHYS 191",
+      "name": "General Phys I -Engineering",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 1,
+      "term": "Spring",
+      "prerequisite_note": "MATH 101 with Concurrency AND PHYS 192 with Concurrency"
+    },
+    {
+      "code": "PHYS 192",
+      "name": "General Physics for Engineering Laboratory I",
+      "credits": 1,
+      "prerequisites": [],
+      "year": 1,
+      "term": "Spring",
+      "prerequisite_note": "PHYS 191 Concur."
+    },
+    {
+      "code": "MATH 102",
+      "name": "Calculus II",
+      "credits": 3,
+      "prerequisites": [
+        "MATH 101"
+      ],
+      "year": 1,
+      "term": "Spring"
+    },
+    {
+      "code": "ENGL 203",
+      "name": "English Language II Post Foundation",
+      "credits": 3,
+      "prerequisites": [
+        "ENGL 202"
+      ],
+      "year": 1,
+      "term": "Spring"
+    },
+    {
+      "code": "CMPS 200",
+      "name": "Computer Ethics",
+      "credits": 1,
+      "prerequisites": [],
+      "year": 2,
+      "term": "Fall"
+    },
+    {
+      "code": "CMPS 303",
+      "name": "Data Structures",
+      "credits": 4,
+      "prerequisites": [],
+      "year": 2,
+      "term": "Fall",
+      "prerequisite_note": "CMPS 251 OR CMPE 265",
+      "prerequisites_one_of": [
+        "CMPS 251",
+        "CMPE 265"
+      ]
+    },
+    {
+      "code": "PHYS 193",
+      "name": "General Physics for Engineering II",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 2,
+      "term": "Fall",
+      "prerequisite_note": "(PHYS 191 OR PHYS 103) AND (PHYS 192 OR PHYS 101 ) OR PHYS 181 OR PHYS 180"
+    },
+    {
+      "code": "PHYS 194",
+      "name": "Experimental General Physics for Engineering II",
+      "credits": 1,
+      "prerequisites": [],
+      "year": 2,
+      "term": "Fall",
+      "prerequisite_note": "PHYS 193 Concur AND PHYS 191 AND PHYS 192"
+    },
+    {
+      "code": "CMPS 205",
+      "name": "Discrete Structures for Computing",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 2,
+      "term": "Fall"
+    },
+    {
+      "code": "CMPS 323",
+      "name": "Design and Analysis of Algorithms",
+      "credits": 3,
+      "prerequisites": [
+        "CMPS 303",
+        "CMPS 205"
+      ],
+      "year": 2,
+      "term": "Spring"
+    },
+    {
+      "code": "CMPS 351",
+      "name": "Fundamentals of Database Systems",
+      "credits": 4,
+      "prerequisites": [
+        "CMPS 251"
+      ],
+      "year": 2,
+      "term": "Spring"
+    },
+    {
+      "code": "CMPE 263",
+      "name": "Computer Architecture & Organization I",
+      "credits": 3,
+      "prerequisites": [
+        "CMPS 205"
+      ],
+      "prerequisites_one_of": [
+        "CMPS 151",
+        "GENG 106"
+      ],
+      "year": 2,
+      "term": "Spring",
+      "prerequisite_note": "CMPS 205 AND (CMPS 151 OR GENG 106)"
+    },
+    {
+      "code": "GENG 200",
+      "name": "Probability and Statistics for Engineers",
+      "credits": 3,
+      "prerequisites": [
+        "MATH 102"
+      ],
+      "year": 2,
+      "term": "Spring"
+    },
+    {
+      "code": "ARAB 100",
+      "name": "Arabic Language I",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 2,
+      "term": "Spring",
+      "note": "Catalog text lists this slot as ARAB 200 (Arabic Language II), but corrected to ARAB 100 per direct confirmation from a current CS student in the program — the catalog entry appears to be an error."
+    },
+    {
+      "code": "CMPS 310",
+      "name": "Software Engineering",
+      "credits": 4,
+      "prerequisites": [],
+      "year": 3,
+      "term": "Fall"
+    },
+    {
+      "code": "CMPE 355",
+      "name": "Data Communication and Computer Network I",
+      "credits": 4,
+      "prerequisites": [
+        "CMPE 263"
+      ],
+      "corequisites": [
+        "GENG 200"
+      ],
+      "year": 3,
+      "term": "Fall",
+      "prerequisite_note": "CMPE 263 AND GENG 200 with Concurrency"
+    },
+    {
+      "code": "CMPS 350",
+      "name": "Web development Fundamentals",
+      "credits": 3,
+      "prerequisites": [
+        "CMPS 251"
+      ],
+      "year": 3,
+      "term": "Spring"
+    },
+    {
+      "code": "GENG 300",
+      "name": "Numerical Methods",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 3,
+      "term": "Spring",
+      "prerequisite_note": "(GENG 106 OR CMPS 151) AND (MATH 211 OR (MATH 102 AND MATH 231))"
+    },
+    {
+      "code": "CMPS 405",
+      "name": "Operating Systems",
+      "credits": 4,
+      "prerequisites": [
+        "CMPS 303",
+        "CMPE 263"
+      ],
+      "year": 3,
+      "term": "Spring"
+    },
+    {
+      "code": "DAWA 111",
+      "name": "Islamic Culture",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 3,
+      "term": "Spring"
+    },
+    {
+      "code": "CMPS 307",
+      "name": "Introduction to Project Management and Entrepreneurship",
+      "credits": 2,
+      "prerequisites": [],
+      "year": 4,
+      "term": "Fall"
+    },
+    {
+      "code": "MAGT 101",
+      "name": "Principles of Management",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 4,
+      "term": "Spring",
+      "prerequisite_note": "ENGL 004 OR ENGL 202 OR ENGL F073 OR ENGL F022TOEFL_Inst Testing Prog 500 OR  TOEFL Internet-based Test 061 OR  Int Eng Lang Test Syst-IELTS 5.5 OR   TOEFL Computer-based Test 173 OR                    OR ENGL 040"
+    },
+    {
+      "code": "CMPS 380",
+      "name": "Cybersecurity Fundamentals",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 3,
+      "term": "Fall",
+      "note": "Name/credits confirmed from the Degree Requirements and Study Plan sections. Its own prerequisite is NOT documented anywhere in the catalog's Chapter 11 course listing (CMPS 380 has no entry there at all \u2014 it jumps from CMPS 373 to CMPS 381). Verify with the department."
+    },
+    {
+      "code": "CMPS 493",
+      "name": "Senior Project I",
+      "credits": 3,
+      "prerequisites": [
+        "CMPS 310"
+      ],
+      "approval_required": "Department approval",
+      "year": 4,
+      "term": "Fall",
+      "prerequisite_note": "Department Approval AND CMPS 310",
+      "note": "Senior Project I. Alternative path: GENG 498 Multidisciplinary Senior Design I (not modeled here)."
+    },
+    {
+      "code": "CMPS 499",
+      "name": "Senior Project II",
+      "credits": 3,
+      "prerequisites": [
+        "CMPS 493"
+      ],
+      "year": 4,
+      "term": "Spring",
+      "note": "Senior Project II. Alternative path: GENG 499 Multidisciplinary Senior Design II (not modeled here)."
+    }
+  ],
+  "note": "Source: QU Undergraduate Catalog 2026-2027 (current/authoritative), cross-checked against the 2024 CS Program Roadmap flowchart. Where they conflicted, the 2026-2027 catalog was used (e.g. Senior Project is now CMPS 493/CMPS 499, not CMPE 493 as in the 2024 flowchart/older data). One exception: the Year 2 Spring Arabic requirement is ARAB 100 (not the catalog's printed ARAB 200), corrected per a current CS student's direct confirmation that the catalog entry is an error. Generic package requirements (Social/Behavioral Sciences, Natural Science/Mathematics, Humanities/Fine Arts, Core Knowledge and Skills packages) are degree requirements but not modeled as specific courses here since students choose from a pool \u2014 not invented/guessed. Total required credits per catalog: 120.",
+  "electives": {
+    "note": "Major Electives Courses (12 CH) \u2014 student picks courses totaling 12 credit hours from this pool. Prerequisites shown are from the catalog's course listing (Chapter 11) but not resolved against this program's completed-course logic.",
+    "credits_required": 12,
+    "options": [
+      {
+        "code": "CMPS 312",
+        "name": "Mobile Application Development",
+        "credits": 3,
+        "prerequisite_text": "CMPS 251"
+      },
+      {
+        "code": "CMPS 356",
+        "name": "Web Application Design and Development",
+        "credits": 3,
+        "prerequisite_text": "CMPS 350"
+      },
+      {
+        "code": "CMPS 360",
+        "name": "Data Science Fundamentals",
+        "credits": 3,
+        "prerequisite_text": "CMPS 151"
+      },
+      {
+        "code": "CMPS 373",
+        "name": "Computer Graphics",
+        "credits": 3,
+        "prerequisite_text": "CMPS 303"
+      },
+      {
+        "code": "CMPS 381",
+        "name": "Applied Cryptography",
+        "credits": 3,
+        "prerequisite_text": "CMPS 380 OR CMPS 385"
+      },
+      {
+        "code": "CMPS 393",
+        "name": "Modeling & Simulation",
+        "credits": 3,
+        "prerequisite_text": "CMPS 303 AND GENG 200"
+      },
+      {
+        "code": "CMPS 403",
+        "name": "Artificial Intelligence",
+        "credits": 3,
+        "prerequisite_text": "CMPS 303"
+      },
+      {
+        "code": "CMPS 433",
+        "name": "Multimedia Systems",
+        "credits": 3,
+        "prerequisite_text": "CMPS 350"
+      },
+      {
+        "code": "CMPS 434",
+        "name": "Game Design and Development",
+        "credits": 3,
+        "prerequisite_text": "CMPS 251"
+      },
+      {
+        "code": "CMPS 451",
+        "name": "Database Management Systems",
+        "credits": 3,
+        "prerequisite_text": "CMPS 351"
+      },
+      {
+        "code": "CMPS 453",
+        "name": "Data mining",
+        "credits": 3,
+        "prerequisite_text": "GENG 200 AND CMPS 351"
+      },
+      {
+        "code": "CMPS 460",
+        "name": "Machine Learning",
+        "credits": 3,
+        "prerequisite_text": "GENG 200 AND CMPS 303"
+      },
+      {
+        "code": "CMPS 465",
+        "name": "Parallel Computing",
+        "credits": 3,
+        "prerequisite_text": "CMPS 405"
+      },
+      {
+        "code": "CMPS 466",
+        "name": "Information Retrieval",
+        "credits": 3,
+        "prerequisite_text": "CMPS 303 OR CMPS 360"
+      },
+      {
+        "code": "CMPE 480",
+        "name": "Computer Vision",
+        "credits": 3,
+        "prerequisite_text": "CMPS 251"
+      },
+      {
+        "code": "CMPE 488",
+        "name": "Wireless Network &Applications",
+        "credits": 3,
+        "prerequisite_text": "CMPE 355 OR CMPE 455"
+      },
+      {
+        "code": "CMPS 497",
+        "name": "Special Topics in Computing",
+        "credits": 3,
+        "prerequisite_text": null
+      }
+    ]
+  }
+}
