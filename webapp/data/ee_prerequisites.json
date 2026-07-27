@@ -1,0 +1,612 @@
+{
+  "program": "Electrical Engineering",
+  "college": "College of Engineering",
+  "total_credits": 131,
+  "source": "QU Undergraduate Catalog 2026-2027, Chapter 10 (degree requirements) and Chapter 11 (course listing)",
+  "courses": [
+    {
+      "code": "MATH 101",
+      "name": "Calculus I",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 1,
+      "term": "Fall",
+      "prerequisite_note": "(MATH 004 or MATH P100 or Scholastic Aptitude Test-SAT 550 or Scholastic Aptitude SAT New 570 or American College Testing-ACT 24 OR QUPM 235 or (Elementary Algebra 082 and College Level Math 095) ) and ( ( (ENGL 040 or ENGL C002 or Total for Integrated Core 400) and (ENGL 041 or ENGL R002 or ESL Reading Skills 100) and (ENGL 042 or ENGL W002 or APL for Writing Workshop 225) ) or ( Total for Integrated Core 400 and ESL Reading Skills 100 and ESL Language Use 100) or TOEFL_Inst Testing Prog 500 or TOEFL Internet-based Test 061 or TOEFL Computer-based Test 173 or Int Eng Lang Test Syst-IELTS 5.5 or ENGL 004 or ENGL 250 or ENGL 201 or ENGL 111 or ENGL 202)"
+    },
+    {
+      "code": "ARAB 100",
+      "name": "Arabic Language I",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 1,
+      "term": "Fall"
+    },
+    {
+      "code": "GENG 107",
+      "name": "Engineering Skills and Ethics",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 1,
+      "term": "Fall"
+    },
+    {
+      "code": "ENGL 202",
+      "name": "English Language I Post Foundation",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 1,
+      "term": "Fall",
+      "prerequisite_note": "ENGL 004 OR (    (ENGL 040 OR ENGL C002 OR Total for Integrated Core 400 ) AND ( ENGL 041 OR ENGL R002 OR ESL Reading Skills 100 ) AND ( ENGL 042 OR ENGL W002 OR APL for Writing Workshop 225) ) OR TOEFL_Inst Testing Prog 500 OR            Int Eng Lang Test Syst-IELTS 5.5 OR            TOEFL Internet-based Test 061 OR TOEFL Computer-based Test 173 OR  (Total for Integrated Core 400 AND ESL Language Use 100 AND  ESL Reading Skills 100)."
+    },
+    {
+      "code": "CHEM 101",
+      "name": "General Chemistry I",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 1,
+      "term": "Fall",
+      "prerequisite_note": "((ENGL 040 OR ENGL C002 OR Total for Integrated Core 400) AND (ENGL 041 OR ENGL R002 OR ESL Reading Skills 100) AND (ENGL 042 OR ENGL W002 OR APL for Writing Workshop 225) ) OR ( Total for Integrated Core 400 AND ESL Reading Skills 100 AND       ESL Language Use 100) OR TOEFL_Inst Testing Prog 500 OR    TOEFL Internet-based Test 061 OR  TOEFL Computer-based Test 173 OR Int Eng Lang Test Syst-IELTS 5.5 OR ENGL 004 OR ENGL 111 OR ENGL 250 OR ENGL 201 OR ENGL 202"
+    },
+    {
+      "code": "CHEM 103",
+      "name": "Experimental General Chemistry I",
+      "credits": 1,
+      "prerequisites": [],
+      "year": 1,
+      "term": "Fall",
+      "prerequisite_note": "CHEM 101 Concur."
+    },
+    {
+      "code": "MATH 102",
+      "name": "Calculus II",
+      "credits": 3,
+      "prerequisites": [
+        "MATH 101"
+      ],
+      "year": 1,
+      "term": "Spring"
+    },
+    {
+      "code": "PHYS 191",
+      "name": "General Phys I -Engineering",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 1,
+      "term": "Spring",
+      "prerequisite_note": "MATH 101 with Concurrency AND PHYS 192 with Concurrency"
+    },
+    {
+      "code": "PHYS 192",
+      "name": "General Physics for Engineering Laboratory I",
+      "credits": 1,
+      "prerequisites": [],
+      "year": 1,
+      "term": "Spring",
+      "prerequisite_note": "PHYS 191 Concur."
+    },
+    {
+      "code": "GENG 106",
+      "name": "Computer Programming",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 1,
+      "term": "Spring"
+    },
+    {
+      "code": "MATH 231",
+      "name": "Linear Algebra",
+      "credits": 3,
+      "prerequisites": [
+        "MATH 101"
+      ],
+      "year": 1,
+      "term": "Spring"
+    },
+    {
+      "code": "ENGL 203",
+      "name": "English Language II Post Foundation",
+      "credits": 3,
+      "prerequisites": [
+        "ENGL 202"
+      ],
+      "year": 1,
+      "term": "Spring"
+    },
+    {
+      "code": "MATH 211",
+      "name": "Calculus III",
+      "credits": 3,
+      "prerequisites": [
+        "MATH 102"
+      ],
+      "year": 2,
+      "term": "Fall"
+    },
+    {
+      "code": "PHYS 193",
+      "name": "General Physics for Engineering II",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 2,
+      "term": "Fall",
+      "prerequisite_note": "(PHYS 191 OR PHYS 103) AND (PHYS 192 OR PHYS 101 ) OR PHYS 181 OR PHYS 180"
+    },
+    {
+      "code": "PHYS 194",
+      "name": "Experimental General Physics for Engineering II",
+      "credits": 1,
+      "prerequisites": [],
+      "year": 2,
+      "term": "Fall",
+      "prerequisite_note": "PHYS 193 Concur AND PHYS 191 AND PHYS 192"
+    },
+    {
+      "code": "MATH 285",
+      "name": "Mathematics for Electrical Engineering",
+      "credits": 3,
+      "prerequisites": [
+        "MATH 102",
+        "MATH 231"
+      ],
+      "year": 2,
+      "term": "Fall"
+    },
+    {
+      "code": "ELEC 210",
+      "name": "Electric Circuits I",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 2,
+      "term": "Fall",
+      "prerequisite_note": "MATH 102 with concurrency AND PHYS 193 with concurrency"
+    },
+    {
+      "code": "ELEC 211",
+      "name": "Electric Circuits I Laboratory",
+      "credits": 1,
+      "prerequisites": [],
+      "year": 2,
+      "term": "Fall",
+      "prerequisite_note": "ELEC 210 with concurrency"
+    },
+    {
+      "code": "GENG 200",
+      "name": "Probability and Statistics for Engineers",
+      "credits": 3,
+      "prerequisites": [
+        "MATH 102"
+      ],
+      "year": 2,
+      "term": "Fall"
+    },
+    {
+      "code": "DAWA 111",
+      "name": "Islamic Culture",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 2,
+      "term": "Spring"
+    },
+    {
+      "code": "GENG 300",
+      "name": "Numerical Methods",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 2,
+      "term": "Spring",
+      "prerequisite_note": "(GENG 106 OR CMPS 151) AND (MATH 211 OR (MATH 102 AND MATH 231))"
+    },
+    {
+      "code": "ELEC 212",
+      "name": "Electric Circuits II",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 2,
+      "term": "Spring",
+      "prerequisite_note": "ELEC 201 OR (ELEC 210 AND ELEC 211) AND MATH 231"
+    },
+    {
+      "code": "ELEC 213",
+      "name": "Electric Circuits II Lab",
+      "credits": 1,
+      "prerequisites": [],
+      "year": 2,
+      "term": "Spring",
+      "prerequisite_note": "ELEC 202 with concurrency OR ELEC 212 with concurrency"
+    },
+    {
+      "code": "ELEC 231",
+      "name": "Electronic Devices and Circuits",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 2,
+      "term": "Spring",
+      "prerequisite_note": "ELEC 201 OR (ELEC 210 AND ELEC 211) AND CHEM 101"
+    },
+    {
+      "code": "ELEC 261",
+      "name": "Digital Systems Design",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 2,
+      "term": "Spring",
+      "prerequisite_note": "ELEC 201 OR (ELEC 210 AND ELEC 211)"
+    },
+    {
+      "code": "ELEC 262",
+      "name": "Digital System Design Lab",
+      "credits": 1,
+      "prerequisites": [],
+      "year": 2,
+      "term": "Spring",
+      "prerequisite_note": "ELEC 261 Concur."
+    },
+    {
+      "code": "ELEC 311",
+      "name": "Electromagnetics",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 3,
+      "term": "Fall",
+      "prerequisite_note": "(PHYS 193 AND MATH 285) OR (MATH 217 AND MATH 385 AND PHYS 193)"
+    },
+    {
+      "code": "ELEC 312",
+      "name": "Electric Machines",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 3,
+      "term": "Fall",
+      "prerequisite_note": "ELEC 202 OR (ELEC 212 AND ELEC 213)"
+    },
+    {
+      "code": "ELEC 313",
+      "name": "Electric Machines Lab",
+      "credits": 1,
+      "prerequisites": [],
+      "year": 3,
+      "term": "Fall",
+      "prerequisite_note": "ELEC 312 Concur."
+    },
+    {
+      "code": "ELEC 371",
+      "name": "Electronic Systems",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 3,
+      "term": "Fall",
+      "prerequisite_note": "ELEC 231 AND (ELEC 201 OR ELEC 213)"
+    },
+    {
+      "code": "ELEC 351",
+      "name": "Signals & Systems",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 3,
+      "term": "Fall",
+      "prerequisite_note": "ELEC 201 OR (ELEC 210 AND ELEC 211)"
+    },
+    {
+      "code": "ELEC 366",
+      "name": "Embedded Systems",
+      "credits": 3,
+      "prerequisites": [
+        "ELEC 261",
+        "GENG 106",
+        "ELEC 262"
+      ],
+      "year": 3,
+      "term": "Fall"
+    },
+    {
+      "code": "ELEC 367",
+      "name": "Embedded Systems Lab",
+      "credits": 1,
+      "prerequisites": [],
+      "year": 3,
+      "term": "Fall",
+      "prerequisite_note": "ELEC 366 Concur."
+    },
+    {
+      "code": "ELEC 341",
+      "name": "Communications Engineering",
+      "credits": 3,
+      "prerequisites": [
+        "ELEC 351",
+        "GENG 200"
+      ],
+      "year": 3,
+      "term": "Spring"
+    },
+    {
+      "code": "ELEC 342",
+      "name": "Communications Engineering Lab",
+      "credits": 1,
+      "prerequisites": [],
+      "year": 3,
+      "term": "Spring",
+      "prerequisite_note": "ELEC 341 Concur."
+    },
+    {
+      "code": "ELEC 352",
+      "name": "Control Systems",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 3,
+      "term": "Spring",
+      "prerequisite_note": "ELEC 351 AND (MATH 285 OR MATH 217)"
+    },
+    {
+      "code": "ELEC 325",
+      "name": "Power Electronics",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 3,
+      "term": "Spring",
+      "prerequisite_note": "ELEC 202 OR (ELEC 212 AND ELEC 213)"
+    },
+    {
+      "code": "ELEC 353",
+      "name": "Signal Analysis & Filtering",
+      "credits": 3,
+      "prerequisites": [
+        "ELEC 351"
+      ],
+      "year": 3,
+      "term": "Spring"
+    },
+    {
+      "code": "ELEC 399",
+      "name": "Practical Training",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 3,
+      "term": "Summer"
+    },
+    {
+      "code": "GENG 360",
+      "name": "Engineering Economics",
+      "credits": 3,
+      "prerequisites": [
+        "MATH 102"
+      ],
+      "year": 4,
+      "term": "Fall"
+    },
+    {
+      "code": "ELEC 491",
+      "name": "Electrical Engineering Systems Design",
+      "credits": 1,
+      "prerequisites": [
+        "ELEC 371",
+        "GENG 107"
+      ],
+      "year": 4,
+      "term": "Fall"
+    },
+    {
+      "code": "HIST 121",
+      "name": "History of Qatar",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 4,
+      "term": "Spring"
+    },
+    {
+      "code": "ELEC 322",
+      "name": "Power Systems",
+      "credits": 3,
+      "prerequisites": [
+        "ELEC 313"
+      ],
+      "year": 3,
+      "term": "Spring"
+    },
+    {
+      "code": "ELEC 323",
+      "name": "Power Systems Laboratory",
+      "credits": 1,
+      "prerequisites": [],
+      "year": 3,
+      "term": "Spring",
+      "prerequisite_note": "ELEC 322 with concurrency",
+      "note": "Catalog typo: this course's own Chapter 11 entry is mislabeled 'ELEC 322 Power Systems Laboratory' instead of ELEC 323. Corrected here based on the Study Plan and Major Requirements list."
+    },
+    {
+      "code": "ELEC 498",
+      "name": "Senior Design Project I",
+      "credits": 3,
+      "prerequisites": [],
+      "year": 4,
+      "term": "Fall",
+      "prerequisite_note": "ELEC 428 with concurrency OR ELEC 491 with concurrency",
+      "note": "Senior Design Project I. Alternative path: GENG 498 Multidisciplinary Senior Design I (not modeled here)."
+    },
+    {
+      "code": "ELEC 499",
+      "name": "Senior Design Project II",
+      "credits": 3,
+      "prerequisites": [
+        "ELEC 498"
+      ],
+      "year": 4,
+      "term": "Spring",
+      "note": "Senior Design Project II. Alternative path: GENG 499 Multidisciplinary Senior Design II (not modeled here)."
+    }
+  ],
+  "note": "Source: QU Undergraduate Catalog 2026-2027, cross-checked against the 2024 Electrical Engineering Program Roadmap flowchart. This is a newly added program (not in the original 3-program scope). Generic package requirements (Social/Behavioral Sciences package) are degree requirements but not modeled as specific courses since students choose from a pool. Total required credits per catalog: 131.",
+  "electives": {
+    "note": "Major Electives Courses (12 CH) \u2014 student picks courses totaling 12 credit hours from this pool.",
+    "credits_required": 12,
+    "options": [
+      {
+        "code": "ELEC 420",
+        "name": "Renewable Energy Sources",
+        "credits": 3,
+        "prerequisite_text": "ELEC 321 AND ELEC 325"
+      },
+      {
+        "code": "ELEC 421",
+        "name": "Solar Electricity System Design",
+        "credits": 3,
+        "prerequisite_text": "ELEC 321 AND GENG 360 with concurrency"
+      },
+      {
+        "code": "ELEC 423",
+        "name": "Electric Power Distribution Systems",
+        "credits": 3,
+        "prerequisite_text": "ELEC 321 OR ELEC 322"
+      },
+      {
+        "code": "ELEC 424",
+        "name": "Operation of Power Systems",
+        "credits": 3,
+        "prerequisite_text": "ELEC 321 OR ELEC 322"
+      },
+      {
+        "code": "ELEC 426",
+        "name": "Protection of Power Systems",
+        "credits": 3,
+        "prerequisite_text": "ELEC 321 OR ELEC 322"
+      },
+      {
+        "code": "ELEC 427",
+        "name": "Transportation Electrical Systems",
+        "credits": 3,
+        "prerequisite_text": "ELEC 428 with concurrency"
+      },
+      {
+        "code": "ELEC 429",
+        "name": "Selected Topics in Electric Machines and Drives",
+        "credits": 3,
+        "prerequisite_text": "ELEC 321"
+      },
+      {
+        "code": "ELEC 438",
+        "name": "Selected Topics in Electronics",
+        "credits": 3,
+        "prerequisite_text": "ELEC 333 OR ELEC 371"
+      },
+      {
+        "code": "ELEC 441",
+        "name": "Fundamentals of Secure Communications",
+        "credits": 3,
+        "prerequisite_text": "ELEC 341 AND MATH 285"
+      },
+      {
+        "code": "ELEC 442",
+        "name": "Satellite Communications",
+        "credits": 3,
+        "prerequisite_text": "ELEC 341"
+      },
+      {
+        "code": "ELEC 446",
+        "name": "Selected Topics in Communication Engineering",
+        "credits": 3,
+        "prerequisite_text": "ELEC 341"
+      },
+      {
+        "code": "ELEC 449",
+        "name": "Optimization and Machine Learning",
+        "credits": 3,
+        "prerequisite_text": "ELEC 353"
+      },
+      {
+        "code": "ELEC 448",
+        "name": "Digital Wireless Communications",
+        "credits": 3,
+        "prerequisite_text": "ELEC 311 AND ELEC 341"
+      },
+      {
+        "code": "ELEC 453",
+        "name": "Advanced Control Systems",
+        "credits": 3,
+        "prerequisite_text": "ELEC 352"
+      },
+      {
+        "code": "ELEC 455",
+        "name": "Selected Topics in Signal Processing",
+        "credits": 3,
+        "prerequisite_text": "ELEC 353"
+      },
+      {
+        "code": "ELEC 458",
+        "name": "Applied Speech and Audio Processing",
+        "credits": 3,
+        "prerequisite_text": "ELEC 353"
+      },
+      {
+        "code": "ELEC 459",
+        "name": "Image and Video Processing",
+        "credits": 3,
+        "prerequisite_text": "ELEC 353"
+      },
+      {
+        "code": "ELEC 460",
+        "name": "Optical Communication",
+        "credits": 3,
+        "prerequisite_text": "ELEC 341"
+      },
+      {
+        "code": "ELEC 469",
+        "name": "Communication Networks and Applications",
+        "credits": 3,
+        "prerequisite_text": "ELEC 341"
+      },
+      {
+        "code": "ELEC 473",
+        "name": "Biomedical Instrumentation",
+        "credits": 3,
+        "prerequisite_text": "ELEC 371"
+      },
+      {
+        "code": "ELEC 474",
+        "name": "Optical Electronics in Modern Communications",
+        "credits": 3,
+        "prerequisite_text": "ELEC 321 AND ELEC 341"
+      },
+      {
+        "code": "ELEC 475",
+        "name": "Smart Grid",
+        "credits": 3,
+        "prerequisite_text": "ELEC 321 AND (GENG 360 with Concurrency) AND (ELEC 341 with Concurrency)"
+      },
+      {
+        "code": "ELEC 480",
+        "name": "Selected Topics in Power Electronics",
+        "credits": 3,
+        "prerequisite_text": "ELEC 325 AND (ELEC 352 with Concurrency)"
+      },
+      {
+        "code": "ELEC 483",
+        "name": "Electric Drives",
+        "credits": 3,
+        "prerequisite_text": "ELEC 312 AND ELEC 325"
+      },
+      {
+        "code": "ELEC 484",
+        "name": "Industrial Control",
+        "credits": 3,
+        "prerequisite_text": "ELEC 352"
+      },
+      {
+        "code": "ELEC 485",
+        "name": "Introduction to Robotics",
+        "credits": 3,
+        "prerequisite_text": "ELEC 352 OR MECH 361"
+      },
+      {
+        "code": "ELEC 489",
+        "name": "RF Communication Electronics",
+        "credits": 3,
+        "prerequisite_text": "ELEC 341 AND ELEC 371"
+      },
+      {
+        "code": "ELEC 495",
+        "name": "Independent Study",
+        "credits": 3,
+        "prerequisite_text": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f1f2;
+  --foreground: #201a1c;
+
+  --color-qu-maroon: #8a1538;
+  --color-qu-maroon-dark: #68102a;
+  --color-qu-maroon-light: #b86a80;
+  --color-qu-rose: #fbf6f7;
+  --color-qu-rose-border: #ead9de;
+  --color-qu-ink: #201a1c;
+  --color-qu-muted: #70676a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Segoe UI", Arial, Helvetica, sans-serif;
+  --font-mono: "Cascadia Mono", "SFMono-Regular", Consolas, monospace;
+
+  --color-qu-maroon: var(--color-qu-maroon);
+  --color-qu-maroon-dark: var(--color-qu-maroon-dark);
+  --color-qu-maroon-light: var(--color-qu-maroon-light);
+  --color-qu-rose: var(--color-qu-rose);
+  --color-qu-rose-border: var(--color-qu-rose-border);
+  --color-qu-ink: var(--color-qu-ink);
+  --color-qu-muted: var(--color-qu-muted);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+::selection {
+  background: #ead1d9;
+  color: var(--color-qu-maroon-dark);
+}
+
+:focus-visible {
+  outline: 3px solid rgba(138, 21, 56, 0.2);
+  outline-offset: 2px;
+}
+
+textarea:focus-visible {
+  outline: none;
+}
+
+.qu-pattern {
+  background-image:
+    linear-gradient(45deg, rgba(138, 21, 56, 0.035) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(138, 21, 56, 0.035) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(138, 21, 56, 0.035) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(138, 21, 56, 0.035) 75%);
+  background-position: 0 0, 0 14px, 14px -14px, -14px 0;
+  background-size: 28px 28px;
+}
+
+.landing-surface {
+  background:
+    radial-gradient(circle at 12% 16%, rgba(196, 130, 151, 0.28), transparent 29%),
+    radial-gradient(circle at 90% 10%, rgba(138, 21, 56, 0.14), transparent 27%),
+    radial-gradient(circle at 76% 92%, rgba(112, 133, 124, 0.16), transparent 30%),
+    linear-gradient(135deg, #f8eef1 0%, #f1e4e8 56%, #ebe4e6 100%);
+}
+
+.chat-surface {
+  background:
+    radial-gradient(circle at 8% 8%, rgba(138, 21, 56, 0.08), transparent 25%),
+    radial-gradient(circle at 92% 86%, rgba(112, 133, 124, 0.1), transparent 28%),
+    #f6f0f2;
+}
+
+.soft-scrollbar {
+  scrollbar-color: #d9c8cd transparent;
+  scrollbar-width: thin;
+}
+
+.soft-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.soft-scrollbar::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: #d9c8cd;
+  background-clip: padding-box;
+}
+
+.soft-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise-in {
+  animation: rise-in 420ms ease-out both;
+}
+
+@keyframes reveal-sidebar-title {
+  0%,
+  18% {
+    transform: translateX(0);
+  }
+  52%,
+  74% {
+    transform: translateX(calc(-1 * var(--title-overflow)));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.sidebar-title-reveal {
+  animation: reveal-sidebar-title 6s ease-in-out 1s infinite;
+  will-change: transform;
+}
+
+.group:hover .sidebar-title-reveal,
+.group:focus-within .sidebar-title-reveal {
+  animation-duration: 4.5s;
+  animation-delay: 0.15s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .sidebar-title-reveal {
+    animation: none !important;
+    transform: none !important;
+  }
+}
