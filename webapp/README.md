@@ -27,8 +27,8 @@ Live site: https://qu-schedule-planner.vercel.app
 - Next.js 16 App Router and React 19
 - TypeScript and Tailwind CSS
 - Groq SDK
-  - text: `llama-3.3-70b-versatile`
-  - academic-image turns: `qwen/qwen3.6-27b`
+  - text: `openai/gpt-oss-120b`
+  - academic-image turns: `qwen/qwen3.8-27b`
 - Vercel deployment
 - Browser `localStorage` for device-local conversation history
 

@@ -7,10 +7,17 @@
 //   following reliability for this agent's phase structure hasn't been
 //   validated the way TEXT_MODEL's has.
 //
-// The previous VISION_MODEL (meta-llama/llama-4-scout-17b-16e-instruct) was
-// deprecated by Groq on 2026-07-17. qwen/qwen3.6-27b is its confirmed
-// vision-capable replacement (verified directly against the Groq API — it's
-// a reasoning model, so route.ts passes reasoning_format: "hidden" so its
-// internal <think> tokens never leak into the reply shown to students).
-export const TEXT_MODEL = "llama-3.3-70b-versatile";
-export const VISION_MODEL = "qwen/qwen3.6-27b";
+// Groq has retired models twice under this app:
+// - meta-llama/llama-4-scout-17b-16e-instruct (vision) -> qwen/qwen3.6-27b,
+//   deprecated 2026-07-17.
+// - llama-3.3-70b-versatile (text) and qwen/qwen3.6-27b (vision) both stopped
+//   existing on Groq by 2026-11-18 (model_not_found, chat returned HTTP 500).
+//   Replacements were picked from Groq's live /models list and spot-checked
+//   directly against the API.
+//
+// TEXT_MODEL is a reasoning model, but Groq returns its reasoning in a separate
+// `reasoning` field, so message.content stays clean with no extra params.
+// VISION_MODEL is also a reasoning model, so route.ts passes
+// reasoning_format: "hidden" so its <think> tokens never reach students.
+export const TEXT_MODEL = "openai/gpt-oss-120b";
+export const VISION_MODEL = "qwen/qwen3.8-27b";
