@@ -19,6 +19,14 @@ import { ensureValidScheduleReply } from "@/lib/scheduling/ensureValidScheduleRe
 // Schedule turns can run a generation plus a repair pass on a reasoning model.
 export const maxDuration = 120;
 
+const RATE_LIMIT_REPLY =
+  "The assistant has hit its usage limit for now. Please try again in a few minutes.";
+
+function isRateLimit(e: unknown): boolean {
+  const status = (e as { status?: number })?.status;
+  return status === 429 || status === 413;
+}
+
 const EMPTY_REPLY_FALLBACK =
   "Sorry, I wasn't able to put that answer together just now. Please send your last message again.";
 
@@ -149,6 +157,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ reply });
     } catch (e) {
       console.error("Groq vision call failed:", e);
+      if (isRateLimit(e)) return NextResponse.json({ reply: RATE_LIMIT_REPLY });
       return NextResponse.json(
         { error: "The assistant is temporarily unavailable. Please try again.", code: "SERVER_ERROR" },
         { status: 500 }
@@ -171,13 +180,13 @@ export async function POST(request: Request) {
       model: TEXT_MODEL,
       messages,
       temperature: 0.3,
-      max_tokens: 4096,
+      max_tokens: 2500,
       reasoning_effort: "low" as const,
     };
     let completion = await createChatCompletionWithRetry(groqClient, textParams);
     let rawReply = completion.choices[0]?.message?.content?.trim() ?? "";
     if (!rawReply) {
-      completion = await createChatCompletionWithRetry(groqClient, { ...textParams, max_tokens: 8192 });
+      completion = await createChatCompletionWithRetry(groqClient, { ...textParams, max_tokens: 3000 });
       rawReply = completion.choices[0]?.message?.content?.trim() ?? "";
     }
     if (!rawReply) {
@@ -194,6 +203,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ reply });
   } catch (e) {
     console.error("Groq text call failed:", e);
+    if (isRateLimit(e)) return NextResponse.json({ reply: RATE_LIMIT_REPLY });
     return NextResponse.json(
       { error: "The assistant is temporarily unavailable. Please try again.", code: "SERVER_ERROR" },
       { status: 500 }

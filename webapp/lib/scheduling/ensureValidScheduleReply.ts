@@ -3,6 +3,7 @@ import type { ChatCompletionCreateParamsNonStreaming } from "groq-sdk/resources/
 import type { ProgramData } from "@/lib/program-data/types";
 import { createChatCompletionWithRetry } from "@/lib/groq/createCompletion";
 import { TEXT_MODEL } from "@/lib/groq/models";
+import { missingPhaseOneQuestion } from "./phaseOneGate";
 import {
   type PlanningMessage,
   validateScheduleReply,
@@ -34,6 +35,11 @@ export async function ensureValidScheduleReply({
   programData,
   reply,
 }: EnsureValidScheduleReplyOptions): Promise<string> {
+  // A schedule drafted before Phase 1 is complete is replaced with the
+  // missing question (no repair pass needed, and no confusing fallback).
+  const missingQuestion = missingPhaseOneQuestion(reply, planningMessages, programData);
+  if (missingQuestion) return missingQuestion;
+
   const firstCheck = validateScheduleReply(reply, planningMessages, programData);
   if (!firstCheck.containsSchedule || firstCheck.valid) return reply;
 
@@ -56,7 +62,7 @@ export async function ensureValidScheduleReply({
       { role: "user", content: repairInstruction },
     ],
     temperature: 0.15,
-    max_tokens: 4096,
+    max_tokens: 2000,
     // Same reasoning-token starvation risk as the first draft; only the text
     // model accepts "low" (the vision model already hides its reasoning).
     ...(model === TEXT_MODEL ? { reasoning_effort: "low" as const } : {}),
@@ -73,9 +79,26 @@ export async function ensureValidScheduleReply({
     return repairedReply;
   }
 
-  console.error("Schedule validation failed after repair", {
+  // The model's drafts vary run to run, so one fresh attempt from the
+  // original conversation is often enough when a repair doesn't take.
+  const freshCompletion = await createChatCompletionWithRetry(client, {
+    model,
+    messages: completionMessages,
+    temperature: 0.3,
+    max_tokens: 2500,
+    ...(model === TEXT_MODEL ? { reasoning_effort: "low" as const } : {}),
+  });
+  const freshReply = freshCompletion.choices[0]?.message?.content?.trim() ?? "";
+  const thirdCheck = validateScheduleReply(freshReply, planningMessages, programData);
+  if (thirdCheck.containsSchedule && thirdCheck.valid) {
+    return freshReply;
+  }
+
+  console.error("Schedule validation failed after repair and retry", {
     firstIssues: firstCheck.issues,
     secondIssues: secondCheck.issues,
+    thirdIssues: thirdCheck.issues,
+    firstDraft: reply.slice(0, 1800),
   });
   return SAFE_FALLBACK;
 }
