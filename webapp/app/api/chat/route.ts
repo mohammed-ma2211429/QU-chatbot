@@ -16,7 +16,11 @@ import {
 } from "@/lib/guardrails/scopeGuard";
 import { ensureValidScheduleReply } from "@/lib/scheduling/ensureValidScheduleReply";
 
-export const maxDuration = 30;
+// Schedule turns can run a generation plus a repair pass on a reasoning model.
+export const maxDuration = 120;
+
+const EMPTY_REPLY_FALLBACK =
+  "Sorry, I wasn't able to put that answer together just now. Please send your last message again.";
 
 const ChatRequestSchema = z.object({
   messages: z.array(
@@ -127,10 +131,13 @@ export async function POST(request: Request) {
         model: VISION_MODEL,
         messages,
         temperature: 0.3,
-        max_tokens: 1024,
+        max_tokens: 3072,
         reasoning_format: "hidden",
       });
-      const rawReply = completion.choices[0]?.message?.content ?? "";
+      const rawReply = completion.choices[0]?.message?.content?.trim() ?? "";
+      if (!rawReply) {
+        return NextResponse.json({ reply: EMPTY_REPLY_FALLBACK });
+      }
       const reply = await ensureValidScheduleReply({
         client: groqClient,
         model: VISION_MODEL,
@@ -157,13 +164,25 @@ export async function POST(request: Request) {
   ];
 
   try {
-    const completion = await createChatCompletionWithRetry(groqClient, {
+    // TEXT_MODEL is a reasoning model: reasoning tokens count against
+    // max_tokens, so a small cap can leave the visible answer empty on long
+    // turns (schedule generation). Keep effort low and the budget generous.
+    const textParams = {
       model: TEXT_MODEL,
       messages,
       temperature: 0.3,
-      max_tokens: 1024,
-    });
-    const rawReply = completion.choices[0]?.message?.content ?? "";
+      max_tokens: 4096,
+      reasoning_effort: "low" as const,
+    };
+    let completion = await createChatCompletionWithRetry(groqClient, textParams);
+    let rawReply = completion.choices[0]?.message?.content?.trim() ?? "";
+    if (!rawReply) {
+      completion = await createChatCompletionWithRetry(groqClient, { ...textParams, max_tokens: 8192 });
+      rawReply = completion.choices[0]?.message?.content?.trim() ?? "";
+    }
+    if (!rawReply) {
+      return NextResponse.json({ reply: EMPTY_REPLY_FALLBACK });
+    }
     const reply = await ensureValidScheduleReply({
       client: groqClient,
       model: TEXT_MODEL,

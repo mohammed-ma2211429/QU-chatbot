@@ -2,6 +2,7 @@ import type Groq from "groq-sdk";
 import type { ChatCompletionCreateParamsNonStreaming } from "groq-sdk/resources/chat/completions";
 import type { ProgramData } from "@/lib/program-data/types";
 import { createChatCompletionWithRetry } from "@/lib/groq/createCompletion";
+import { TEXT_MODEL } from "@/lib/groq/models";
 import {
   type PlanningMessage,
   validateScheduleReply,
@@ -55,7 +56,10 @@ export async function ensureValidScheduleReply({
       { role: "user", content: repairInstruction },
     ],
     temperature: 0.15,
-    max_tokens: 1400,
+    max_tokens: 4096,
+    // Same reasoning-token starvation risk as the first draft; only the text
+    // model accepts "low" (the vision model already hides its reasoning).
+    ...(model === TEXT_MODEL ? { reasoning_effort: "low" as const } : {}),
   });
   const repairedReply =
     repairCompletion.choices[0]?.message?.content?.trim() ?? "";
